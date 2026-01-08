@@ -1,0 +1,309 @@
+Wt is python?
+==========
+
+	Ø It is a high-level , interpreted, general-purpose programming lng
+	Ø Python has simplicity, readability and rapid development 
+	Ø It was designed so that humans  can read n write code easily.
+
+Who developed python?
+=================
+
+	Ø Python was created by Guido van Rossum
+	Ø First release in 1991
+	Ø Named after monty python , not the snake
+
+
+Why python is popular?
+=================
+
+	Ø Easy to learn
+	Ø Simple english like syntax
+	Ø Less code compared to other langs
+	Ø Huge community support
+	Ø Massive library ecosystem
+	Ø Work on all OS
+
+
+Where python is used?
+================
+
+	Ø Web development 
+	Ø Automation & scripting 
+	Ø DevOps & cloud computing 
+	Ø Data science & analytics 
+	Ø AI & ML
+	Ø Cyber security
+	Ø Game development 
+
+Features of python 
+=============
+
+	1. Simple & Readable :- no curly  braces {}, uses indentation 
+	2. Interpreted language:- code is executed line by line , no compilation step
+	3. Dynamically typed:- no need to declare data types explicitly 
+	4. Platform independent:- same code runs on w-os, linux-os and macos
+	5. Open source :- free to use and distribute 
+
+Python language levels
+=================
+
+	1. Low level:- close to hardware 
+	2. High-level :- human-readable
+
+Python versions
+============
+
+	Ø Python 2 :- deprecated 
+	Ø Python 3 :- current & recommended 
+	Ø Always use python 3
+
+Python execution model
+==================
+
+	1. Write python code (.py)
+	2. Python interpreter reads the code
+	3. Code is converted into bytecode
+	4. Bytecode is executed by python vm
+	5. Output is produced 
+
+Wt is an interpreter?
+===============
+
+	Ø Executes code line by line
+	Ø Stops execution if any error occurs 
+	Ø Helps in easy debugging
+
+Python keywords 
+============
+
+	Ø Keywords are reserved words that have special meaning
+
+Examples :
+========
+
+If
+Else
+Elif
+For
+While
+Def
+Class
+Try
+Except 
+Break
+Finally
+False
+True
+With
+None
+Nor
+Or
+And
+Return
+Continue 
+Pass
+Hash
+Import
+Raise
+Yield 
+Global
+Assert
+Lambda 
+Await
+As
+From
+
+
+Identifiers in python 
+===============
+
+	Ø Identifiers are names  used to identify :- variables, functions and classes
+
+Rules:- 
+======
+
+	Ø Must start with a letter or _
+	Ø Can not start with a number 
+	Ø Can not use special characters expect _
+	Ø Case-sensitive
+
+Python indentation 
+==============
+
+	Ø Python uses indentation instead of curly braces {}
+	Ø Indentation defines code blocks
+	Ø Incorrect indentation causes errors
+	Ø This makes python code clean and readable 
+
+Comments in python 
+===============
+
+Comments are used to 👇
+
+	Ø Explain code
+	Ø Improve readability
+
+Types
+=====
+
+	Ø Single line : # <comment>
+	Ø Multi-line: """ <comment> """
+
+Python app in real world
+==================
+
+	Ø Atomate scripts 
+	Ø Server monitoring 
+	Ø Log analysis 
+	Ø Web api's
+	Ø Cloud provisioning 
+	Ø Ci/cd pipeline
+
+
+Variables in python
+==============
+
+Wt is variable?
+===========
+
+	Ø A variable is a named memory location used to store data temporarily during program execution
+
+In python 
+=======
+
+	Ø Variables are created automatically 
+	Ø No need to declare data type
+
+Python variable syntax
+================
+
+Variable_name = value
+
+name = M murali Mohan
+
+name = india
+
+age = 29
+
+Salary = 50000
+
+Python Data Types
+==============
+
+	Ø Python provides built-in data types to store different kinds or data
+
+	1. Integer (int)
+=============
+
+	Ø To store whole numbers 
+
+Age = 29
+Count = 29
+States = 29
+Ut = 8
+
+	2. Floating point (float)
+===================
+
+	Ø To store decimal values 
+
+Price = 95.45
+Temperature = 36.5
+
+	3. String (str)
+===========
+
+	Ø To store text or character 
+
+Name = "murali"
+Role = 'DevOps Trainer'
+Company = '''clahan tech'''  or """clahan tech"""
+
+	4. Boolean (bool)
+===============
+
+	Ø To store true or fasle
+
+Is_active = true
+Is_admin = false
+
+
+a = 10
+b = 5
+print (a > b)
+print ( a < b)
+print (a == b)
+print (a != b)
+
+
+	5. Complex number 
+================
+
+	Ø To store real value and imaginary value
+
+A + bj
+
+Z = 3+4j
+
+
+z = 6+8j
+print(z)
+print(z.real)
+print(z.imag)
+
+	6. List 
+=======
+
+	Ø To store a set of values and 
+
+
+Characteristics of list
+===============
+
+Ordered:- items  keep the order or position in which they are inserted
+Mutable:- you can change , add or remove items
+Allow duplicates:- same value can appear multiple time
+Can store different data types :- int, float, string, list ,boolean etc
+
+
+fruits = ["apple", "banana", "mango"]
+marks = [80, 75, 90]
+mixed = [1, "python", 3.5, True ]
+print(fruits)
+print(marks)
+print (mixed)
+
+
+
+fruits = ["grpaes", "mango", "apple"]
+print (fruits[0])
+print (fruits[1])
+print(fruits[2])
+
+	7. Tuple 
+========
+	Ø To a collection of multiple values
+	Ø Items will  in ordered 
+	Ø Immutable 
+	Ø Allows duplicate values
+	Ø Define using parentheses ()
+
+
+fruits = ("apple", "banana", "mango")
+score = (287, 276, 49, 153)
+mixed = ("banana", 287, 49.25, False)
+print(fruits)
+print(score)
+print (mixed)
+
+
+
+numbers = (10, 20, 30, 40, 50)
+print(numbers[1:3])
+print(numbers[2:])
+print(numbers[1:4])
+
+
+
+
+	
