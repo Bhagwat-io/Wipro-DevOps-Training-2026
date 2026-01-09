@@ -1,0 +1,131 @@
+operators' 
+==========
+
+	Ø What is operators 
+	Ø Operator in python are special 
+
+Examples 
+A = 10
+B = 20
+C = a+b
+
+
+Conditional Statements 
+======================
+
+	Ø Conditional statements allow a program to make decisions  based on conditions 
+	Ø The program executes different blocks of code depending on whether a condition is True or False 
+
+Real time analogy
+=================
+
+	Ø If it rains >> take umbrella 
+	Ø Else  >> don’t take umbrella
+
+
+Why do we need conditional statements?
+======================================
+
+	Ø Control the flow of execution 
+	Ø implement decision-making logic
+	Ø Validate user input
+	Ø Apply business rules
+	Ø Build real-world app's
+
+Types of conditional
+====================
+
+	1. If
+	2. If else
+	3. If elif else
+
+
+	1. If
+=======
+
+	Ø It will execute code only if the condition is true
+
+
+age = 20
+if age >= 18:
+  print("you are an adult")
+  print("you can vote")
+  print("you have full legal rights")
+
+
+
+number = 15
+if number > 0:
+  print("the number is positive")
+
+
+	2. If else 
+============
+
+	Ø  it will execute one block if condition is true, otherwise it will execute else block
+
+
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+else:
+  print("b is not great than a")
+
+
+
+number  = 7
+if number % 2 == 0:
+  print("the number is even")
+else:
+  print ("the number is add")
+
+
+	3. If elif else
+=================
+
+	Ø It will use for when multiple conditions need to be checked
+
+
+score = 75
+if score >= 90:
+  print ("Grade A")
+elif score >= 80:
+  print ("Grade B")
+elif score >= 70:
+  print ("Grade C")
+elif score >= 60:
+  print ("Grade D")
+
+
+a = 33
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+
+
+Loops
+=====
+
+	Ø A  loop in python is a control statement  used to execute a block of code repeatedly until a condition is satisfied  or for each  item in a sequence 
+	Ø Loops are helping us to avoid writing same code again and again.
+
+	1. For loop
+	2. While loop
+
+
+	1. For loop
+=============
+
+	Ø A for loop is used to iterate over a sequence 
+
+
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
+
+
+for i in range (1, 6):
+  print(i)
