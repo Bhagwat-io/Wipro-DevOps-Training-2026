@@ -69,3 +69,120 @@ print(bool(0))
 print(bool(1))
 print(bool(""))
 print(bool("hello"))
+
+List build-in methods
+================
+
+  1. append()
+==========
+
+	Ø Adds one element at the end
+
+Syntax  :-  list.name.method(arguments)
+
+
+numbs = [1, 2, 3]
+numbs.append(4)
+print(numbs)
+
+
+	2. Extend ()
+===========
+
+	Ø Ad multiple elements 
+
+
+a = [1, 2]
+a.extend([3, 4, 5])
+print(a)
+
+	3. Insert ()
+==========
+
+	Ø Insert  elements at specific position 
+
+
+a = [10, 20, 40]
+a.insert(2, 30)
+print(a)
+
+
+	4. Remove()
+===========
+
+	Ø Removes first matching element 
+
+
+a = [10, 20, 30, 20]
+a.remove(20)
+print(a)
+
+
+	5. Pop()
+========
+
+	Ø It will remove element by index 
+
+
+a = [1, 2, 3]
+a.pop()
+print(a)
+
+
+	6. Clear ()
+=========
+
+	Ø Removes all elements 
+
+
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+a.clear()
+print(a)
+
+	7. Index()
+=========
+
+	Ø It will return index of element 
+
+
+a = [10, 20, 30]
+print(a.index(20))
+
+
+	8. Count ()
+==========
+
+	Ø Count occurrences
+
+
+a = [1, 2, 3, 4, 5, 6, 7, 2, 3, 5, 6, 7, 1, 2, 2, 2]
+print(a.count(2))
+
+
+	9. Sort()
+========
+
+	Ø Sorts list
+
+a = [4, 2, 5, 1]
+a.sort()
+print(a)
+
+	10. Reverse()
+==========
+
+	Ø Reverses list order
+
+a = [1, 2, 3, 4, 5, 6, 50, 25, 150, 1000, 1500]
+a.reverse()
+print(a)
+
+
+	11. Copy ()
+==========
+
+	Ø Creates a shallow copy
+
+a = [1, 2, 3]
+b = a.copy()
+print(b)
