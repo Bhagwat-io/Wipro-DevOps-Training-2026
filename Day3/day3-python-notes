@@ -274,3 +274,43 @@ print(s)
 s = {11, 13, 12, 14, 'q', 'b', 17, 18}
 s.pop()
 print(s)
+
+String built-in methods in python
+========================
+
+	1. Upper()
+=========
+
+
+text = "python"
+print(text.upper())
+
+	2. Lower()
+==========
+
+
+text = "DEVOPS"
+print(text.lower())
+
+	3. Title()
+========
+	Ø It will convert first character of all words in a string to uppercase and remaining will be lowercase is called title method in string.
+ 
+
+sentence = "we are learning python concepts"
+print(sentence.title())
+
+	4. Find()
+========
+
+
+text = "clahan tech"
+print(text.find("a"))
+
+
+	5. Count()
+=========
+
+
+fruit = "banana"
+print(fruit.count("a"))
