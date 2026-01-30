@@ -35,3 +35,22 @@ Who -> user or group or other
 Operators-> +, -
 Permission:- r, w,x
 file:- file name
+
+	2. Numeric mode (most important for devops)
+
+	Ø Each permission has number value
+
+R -> 4
+W -> 2
+X -> 1
+
+	Ø We have to add numbers depends on permission
+
+User :- r+w+x -> 4+2+1 = 7 
+User2 :- rw-  -> 4+2 = 6 
+Group :- --x  -> 1 = 1 
+Others:- -w- -> 2 = 2 
+
+Chmod rwx filename
+
+Chmod 700 filename
