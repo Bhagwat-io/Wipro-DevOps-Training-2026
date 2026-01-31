@@ -54,3 +54,9 @@ touch amazon
 controlplane:~$ cat variables.sh 
 name="murali"
 echo "Hello $name"
+
+controlplane:~$ cat dir.sh 
+mkdir ipl
+mkdir demo
+mkdir sample
+mkdir nasa
