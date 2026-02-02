@@ -1,0 +1,23 @@
+   2 echo "# wipro-git-2026" >> README.md
+   3 git status
+   4 git init
+   5 git status
+   6 git add .\README.md
+   7 git status
+   8 git commit -m "added readme file"
+   9 git status
+  10 git branch -M main
+  11 git remote -v
+  12 git remote add origin https://github.com/Msocial123/wipro-git-2026.git
+  13 git remote -v
+  14 git push -u origin main
+  15 git remote -v
+  16 git push -u origin main
+  17 git status
+  18 git add .
+  19 git status
+  20 git commit -m "added index.html file"
+  21 git status
+  22 git branch
+  23 git push
+  24 git status
