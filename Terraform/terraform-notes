@@ -1,0 +1,68 @@
+Terraform
+
+11 December 2025
+14:46
+
+I want to build a home
+===================
+
+	Ø Land
+	Ø Plan or blue print --> rooms, floors, kitchen, floor tiles, windows, lift, steps
+	Ø Materials
+	Ø Engineers
+	Ø Measuring tools
+	Ø Builders
+	Ø House 
+
+
+If we don’t have a proper plan or blue print wt will happen?
+=================================================
+
+	Ø We can't build a house within the given timeline
+	Ø Need more materials
+	Ø Need more expenses 
+	Ø You have to more money for extra days to the builders
+	Ø There is no proper direction
+
+If you set up any infrastructure manually wt will happen?
+==============================================
+
+	Ø It will take more time
+	Ø Manual errors
+	Ø It is difficult to manage infrastructure 
+	Ø It is difficult to automate infrastructure 
+	Ø It is difficult to track and versioning ur infrastructure 
+
+Solution by terraform
+==================
+	Ø It will save time
+	Ø It will reduce manual errors
+	Ø It is easy to manage infrastructure 
+	Ø It is easy to automate infrastructure 
+	Ø It is easy track and versioning ur infrastructure 
+	Ø To reusable infrastructure 
+
+I want to deploy a application wt do I need?
+====================================
+
+	Ø Servers
+	Ø Networks
+	Ø Database
+	Ø Storages
+
+
+Terraform prerequisites
+====================
+
+	Ø  code or script   --> blue-print
+	Ø Terraform cli + aws cli + access keys + providers  --> builders
+	Ø Infrastructure   --> house 
+
+	Ø Terraform always requires one working directory or a folder
+
+Us-east-1:-  us-east-1a, us-east-1b,  us-east-1c, us-east-1d,
+
+Ap-south-1:-  ap-osuth-1a,  ap-south-1b
+
+
+Provder.tf
