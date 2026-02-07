@@ -1,0 +1,28 @@
+---
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+  vars:
+    pkg1: httpd
+    pkg2: git
+    pkg3: docker
+    pkg4: java
+    pkg5: python
+
+  tasks:
+
+    - name: install httpd on my host machine
+      action: yum pkg='{{pkg1}}' state=present
+
+    - name: install git on my host machine
+      action: yum pkg='{{pkg2}}' state=present
+
+    - name: install docker on my host machine
+      action: yum pkg='{{pkg3}}' state=present
+
+    - name: install java on my host machine
+      action: yum pkg='{{pkg4}}' state=present
+
+    - name: install python on my host machine
+      action: yum pkg='{{pkg5}}' state=present
