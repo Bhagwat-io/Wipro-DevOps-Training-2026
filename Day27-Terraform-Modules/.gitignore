@@ -3,3 +3,4 @@
 !*.gitignore
 !*.tfvars
 !modules/
+!modules/**
