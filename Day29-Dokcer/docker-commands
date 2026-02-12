@@ -1,0 +1,39 @@
+   82  vi Dockerfile
+   83  ls
+   84  vi Dockerfile
+   85  ls
+   86  cat Dockerfile
+   87  ls
+   88  docker build -t clahan-web-app:v1.0.0 .
+   89  docker images
+   90  ls
+   91  docker run -d --name clahan-app -p 80:80  clahan-web-app:v1.0.0
+   92  docker ps
+   93  ls
+   94  cd ..
+   95  ls
+   96  cd clahan-technology/
+   97  ls
+   98  rm script.js style.css
+   99  ls
+  100  > index.html
+  101  vi index.html
+  102  ls
+  103  cat index.html
+  104  ls
+  105  docker build -t html-login-app:v1.0.0 .
+  106  docker images
+  107  docker run -d --name login-app -p 81:80 html-login-app:v1.0.0
+  108  docker ps
+  109  ls
+  110  > index.html
+  111  cat index.html
+  112  vi index.html
+  113  ls
+  114  cat index.html
+  115  ls
+  116  docker build -t signup-app:v1 .
+  117  docker images
+  118  docker run -d --name socil-web-app -p 82:80 signup-app:v1
+  119  docker ps
+  120  history

@@ -1,0 +1,227 @@
+Wt is Dockerfile?
+============
+
+Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image
+
+Recipe:- dockerfile
+
+Dish :- Docker image
+
+Cooking process;- docker build
+
+Why Dockerfile?
+============
+
+	Ø To run same app in dev, qa, stag and prod.
+	Ø For consistent env (java, nodejs, python etc)
+	Ø To reproducible builds
+
+Dockerfile ensures 👇
+================
+
+	Ø Same env everywhere 
+	Ø Automated image creation
+	Ø Version control of infrastructure 
+	Ø Easy cicd integration 
+
+Dockerfile   - file
+
+	1. FROM
+=========
+
+	Ø  it is used to specify a base image for the container , without having a base image you cant create any container
+
+	Ø You are going to choosing a platform where you want to host or run your app is called FROM.
+
+
+FROM  python:3.15.0a6-trixie
+
+FROM openjdk:27-ea-oraclelinux8
+
+FROM node:latest
+
+FROM node:18.2
+
+FROM  ubuntu:latest
+
+FROM amazon-linux:latest
+
+=========================================================================================
+
+
+	2. WORDKIR
+============
+
+	Ø It is used to specify a working directory inside the container to keep or container app src, dependencies, libraries etc.
+
+WORKDIR  /app
+
+WORKDIR /sample
+
+WORKDIR /murali
+
+WOKRDIR /amazon 
+
+=========================================================================================
+
+	3. RUN 
+========
+
+Commands are two type
+
+	Ø Some commands has to be execute while building docker image 
+	Ø Some commands has to be execute while creating the container
+
+	1. Build time commands:-  it has to execute only while building docker image
+	2. Run time commands:- it has to execute only while creating the container 
+
+	Ø It is used to execute commands while building docker image
+
+RUN  apt update -y
+
+RUN apt install apache2 -y
+
+RUN yum update -y
+
+RUN yum install httpd -y
+
+RUN npm install
+
+RUN pip install requirements.txt
+
+===========================================================================================
+
+	4. COPY 
+========
+
+	Ø It is used to copy app src, libraries, dependencies and conf file/folder from host or local server to container machine
+	Ø Copy instruction always looking for two kind of locations - one your src location and destination location 
+
+COPY <SRC-LOCT>  <DEST-LOCT>
+
+COPY  .   /app
+
+COPY . .
+
+COPY  server.js  .  OR /app
+
+=============================================================================================
+
+	5. EXPOSE 
+==========
+
+	Ø It is used to specify app or container port number 
+
+EXPOSE 8080
+
+EXPOSE 9000
+
+EXPOSE 80
+
+EXPOSE 9090
+
+EXPOSE 5000
+
+EXPOSE 3000
+
+================================================================================================
+
+	6. CMD
+========
+
+	Ø It is used to execute commands while creating the container to run the application inside the container.
+	Ø CMD will overwrite commands
+	Ø You can have multiple CMD instructions in a dockerfile 
+	Ø Last CMD instruction only will be executed by  docker
+	
+
+Run time commands:- it has to execute only while creating the container 
+
+
+node server.js
+
+node app.js
+
+node start
+
+
+CMD ["node", "server.js"]
+
+CMD ["node",  "app.js"]
+
+CMD ["pip", "app.py"]
+
+================================================================================================
+
+	7. ENTRYPOINT
+===============
+
+Ø It is used to execute commands while creating the container to run the application inside the container.
+Ø It will never overwrite any command
+
+ENTRYPOINT ["node", "app.js"]
+
+How dockerfile works?
+=================
+
+	Ø Docker always reads instructions one by one (top to bottom)
+	Ø A Dockerfile must begin with a FROM instruction
+	Ø a valid Dockerfile must start with a FROM instruction
+	Ø Docker creates a temporary container
+	Ø It will execute that instructions 
+	Ø It will save the result as a new image layer
+	Ø It will remove the temporary container 
+	Ø Final output = docker image
+
+
+To deploying a web app wt we did?
+=========================
+
+	1. Updated os
+	2. Installed apache2 web server
+	3. Moved or copied  src to /var/www/html
+	4. We have updated src 
+
+
+=====================================
+
+
+ENTRYPOINT [ "apachectl", "-D", "FOREGROUND" ]
+ apachectl :- it is a control script for manaing apache http server , it is used for to start apache, stop apche , restart apache and run apache in specific modes
+
+-D FOREGROUND :- by default apache will run in background ( daemon mode), to keep running the container in background
+
+
+How to create container
+=================
+
+docker run -d --name <c-name>  -p <host-port-no:container-port-no>  <i-name> 
+
+
+
+
+
+
+docker run :- firstly it will pull the image , secondly it will create the container, thirdly it will start the container.
+
+-d :- detached  mode , you are going to running ur container in a background .
+
+--name :- you must give a name to the container and container name must be unique 
+
+-p :- port mapping 
+
+Host port no:- it will be decided by DevOps team, it is  our wish and host port number should be unique.
+
+App or container port:- it will be decided by Dev Team and same port number you can for n.of containers.
+
+
+Image name:- you must specify your image name.
+
+
+
+
+
+
+
+
+
