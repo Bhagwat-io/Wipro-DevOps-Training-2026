@@ -30,6 +30,37 @@
   31 docker ps
   32 docker exec -it nginx-app bash
   33 docker exec -it nginx bash
+    38 docker images
+  39 docker rm daviddocker526/hospital:v1
+  40 docker rmi daviddocker526/hospital:v1
+  41 docker images
+  42 ls
+  43 ls
+  44 docker ps
+  45 docker stop nginx-app
+  46 docker restart nginx-app
+  47 docker pause nginx-app
+  48 docker ps
+  49 docker unpause nginx-app
+  50 docker ps
+  51 docker rm nginx-web-app
+  52 docker stop nginx-web-app
+  53 docker ps -a
+  54 docker rm nginx-web-app
+  55 docker ps -a
+  56 docker ps
+  57 docker rm -f nginx
+  58 docker ps
+  59 docker ps -a
+  60 docker imagers
+  61 docker images
+  62 docker rmi retail-app
+  63 docker images
+  64 docker rmi $(docker images -q)
+  65 docker images
+  66 docker ps -a
+  67 docker rm -f $(docker ps -aq)
+  68 docker ps -a
 
   # notes
 
@@ -44,4 +75,15 @@ Every container will get one ip add.
 	5. docker logs :- it will give logs of the container
 	6. docker stop :- it will stop the container 
    docker restart :- it will restart container
-   docker exec -it :- it will login to the containe
+   docker exec -it :- it will login to the container
+   	9. docker run :- firstly it will pull the image , secondly it will create the container, thirdly it will start the container.
+	10. docker ps :- to list only running containers
+	11. docker ps -a:- to list all containers.
+	12. docker pause :- it will pause the container (means stops only container process)
+	13. docker unpause :- it will unpause the container.
+	14. docker rm ;- To delete only stopped containers
+	15. docker rm -f :- To delete running containers directly.
+	16. docker rmi ;- to delete unused images
+	17. docker rmi $(docker images -q) :- To delete all images 
+	18. docker rm $(docker ps -aq):- to delete all stopped containers
+docker rm -f $(docker ps -aq) :- To delete all containers including running.
