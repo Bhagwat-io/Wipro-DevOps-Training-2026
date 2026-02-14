@@ -1,0 +1,47 @@
+# commands
+
+   4 docker ps
+   5 docker ps -a
+   6 docker --veersion
+   7 docker --version
+   8 docker create --name nginx-web-app nginx:mainline-alpine3.23-perl
+   9 docker ps
+  10 docker ps -a
+  11 docker start 5f8cd3c42689
+  12 docker ps
+  13 docker ps
+  14 docker inspect nginx-web-app
+  15 curl 172.17.0.2:80
+  16 docker ps
+  17 docker logs nginx-web-app
+  18 docker create --name nginx ngninx:latest
+  19 docker create --name nginx ngnix:latest
+  20 docker create --name nginx nginx:latest
+  21 docker ps
+  22 docker ps -a
+  23 docker start nginx
+  24 docker ps
+  25 docker run -d --name nginx-app -p 86:80 nginx:latest
+  26 docker ps
+  27 docker stop 95232782e673
+  28 docker ps
+  29 docker ps -a
+  30 docker restart nginx-app
+  31 docker ps
+  32 docker exec -it nginx-app bash
+  33 docker exec -it nginx bash
+
+  # notes
+
+  Container life cycle 
+==============
+Every container will get one ip add.
+
+	1. docker create :- it will create only container 
+	2. docker start :- it will start the container
+	3. docker inspect :- it will give all details of container
+	4. Curl :- to check svc response 
+	5. docker logs :- it will give logs of the container
+	6. docker stop :- it will stop the container 
+   docker restart :- it will restart container
+   docker exec -it :- it will login to the containe
