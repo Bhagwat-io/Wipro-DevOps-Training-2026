@@ -9,6 +9,8 @@ services:
       - "3000:3000"
     environment:
       - MONGODB_URI=mongodb://mongodb:27017/transactionhistory
+    networks:
+      - transaction-network
 
     depends_on:
       - mongodb
@@ -18,3 +20,10 @@ services:
     container_name: mongodb
     ports:
       - "27017:27017"
+    networks:
+      - transaction-network
+
+networks:
+  transaction-network:
+    name: transaction-network
+    driver: bridge
