@@ -52,3 +52,21 @@
 # to install ping software
 
 apt update && apt install iputils-ping -y
+
+# host network commands
+
+   64  ls
+   65  docker network ls
+   66  docker inspect network host
+   67  docker inspect network bride
+   68  docker inspect network brige
+   69  docker inspect network bridge
+   70  docker run -dit --name demo-1 --network host nginx
+   71  docker ps
+   72  docker inspect demo-1
+   73  docker run -dit --name demo-2 --network host nginx
+   74  docker ps
+   75  docker exec -it demo-1 bash
+   76  ls
+   77  docker ps
+   78  docker exec -it demo-1 bash
