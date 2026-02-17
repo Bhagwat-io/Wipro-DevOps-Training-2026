@@ -84,3 +84,31 @@
   128  ls
   129  history
 
+# bind volumes commans
+
+  169  mkdir ~/ipl-new-bind-volume
+  170  cd ~/ipl-new-bind-volume
+  171  ls
+  172  exit
+  173  ls
+  174  docker run -d --name ipl -v ~/ipl-new-bind-volume:/app -p 3000:3000 muralisocial123/ipl:latest
+  175  docker ps
+  176  docker ps -a
+  177  docker logs ipl
+  178  docker ps -sa
+  179  docker run -d --name ipl-2 -v ~/ipl-new-bind-volume:/app/uploads -p 3001:3000 muralisocial123/ipl:latest
+  180  docker ps
+  181  cd ~/ipl-new-bind-volume
+  182  ls
+  183  touch index.html login.html
+  184  ls
+  185  exit
+  186  docker exec -it ipl-2 bash
+  187  cd ~/ipl-new-bind-volume/
+  188  ls
+  189  mkdir t-20
+  190  ls
+  191  docker exec -it ipl-2 bash
+  192  ls
+  193  history
+

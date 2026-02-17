@@ -62,3 +62,12 @@ When bash exits --> container exists
 docker run -d --name ipl -v ipl-volume:/app -p 3000:3000 muralisocial123/ipl:latest
 
 Syntax :- -v <volume-name:container-path> 
+
+    3. Bind volume
+=============
+
+Ø Docker does not manage bind volume
+Ø Bind volume is nothing but you are going to choose the location where you want to save your data 
+Ø /var/lib/docker/volumes  - mount path of the volumes in docker
+Ø You are not going to creating a volume but you are going to creating the location where you want to save your data
+You can control the location the data
