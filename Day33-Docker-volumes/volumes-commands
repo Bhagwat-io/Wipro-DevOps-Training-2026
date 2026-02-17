@@ -6,7 +6,7 @@
    47  docker ps -a
    48  docker volume ls
    49  docker volume inspect d917af9c4909a847494db011a0422b0581e1464d3e452d9e06cde9659774e2c9
-   50  cd /var/lib/docker/volumes/
+   50  cd /var/lib/docker/volumes/  ---> docker mount location (By default)
    51  ls
    52  cd d917af9c4909a847494db011a0422b0581e1464d3e452d9e06cde9659774e2c9
    53  ls
