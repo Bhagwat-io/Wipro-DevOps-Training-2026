@@ -50,3 +50,37 @@
    94  cd _data/
    95  ls
    96  history
+
+   # named volume commands
+
+     100  docker volume create ipl-volume
+  101  docker volume ls
+  102  docker volume inspect ipl-volume
+  103  docker run -d --name ipl -v ipl-volume:/app -p 3000:3000 muralisocial123/ipl:latest
+  104  docker ps
+  105  cd /var/lib/docker/volumes
+  106  ls
+  107  cd ipl-volume/
+  108  ls
+  109  cd _data/
+  110  ls
+  111  mkdir t-20-wc
+  112  ls
+  113  cd t-20-wc/
+  114  ls
+  115  touch ind usa sl sa nz ir en
+  116  ls
+  117  exit
+  118  ls
+  119  docker ps
+  120  docker rm -f ipl
+  121  ls
+  122  cd /var/lib/docer/volumes
+  123  cd /var/lib/docker/volumes
+  124  ls
+  125  cd ipl-volume/_data/
+  126  ls
+  127  cd t-20-wc/
+  128  ls
+  129  history
+

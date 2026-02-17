@@ -47,3 +47,18 @@ Volume types
 /bin/bash   - you overriding the default command of the image (CMD ["node", "server.js"]
 
 When bash exits --> container exists 
+
+    2. Named volume
+==============
+
+Ø It is easy to manage
+Ø Reusable 
+Ø Safe for db or app data
+Ø It is for prod use
+Ø You are going to assigning a meaningful name to the volume
+Ø Named  volume is a docker  managed storage with a fixed name that you can control and can reuse across multiple containers
+
+
+docker run -d --name ipl -v ipl-volume:/app -p 3000:3000 muralisocial123/ipl:latest
+
+Syntax :- -v <volume-name:container-path> 
