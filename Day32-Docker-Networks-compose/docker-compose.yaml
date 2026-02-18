@@ -11,6 +11,8 @@ services:
       - MONGODB_URI=mongodb://mongodb:27017/transactionhistory
     networks:
       - transaction-network
+   # volumes:
+    #  - mongodb-data:/app/uploads
 
     depends_on:
       - mongodb
@@ -22,8 +24,15 @@ services:
       - "27017:27017"
     networks:
       - transaction-network
+    volumes:
+      - mongodb-data:/data/db
 
 networks:
   transaction-network:
     name: transaction-network
     driver: bridge
+
+# delcare a volume to persist data
+volumes:
+  mongodb-data:
+    name: transaction-mongodb-data
