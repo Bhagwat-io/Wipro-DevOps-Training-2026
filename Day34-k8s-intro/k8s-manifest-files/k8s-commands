@@ -148,3 +148,20 @@
   200  kubectl apply -f deployment.yaml
   201  kubectl get all -n murali-ns
   202  kubectl describe deployment ipl-deployment -n murali-ns
+
+  # deployment rolloing update commands
+
+    213  kubectl get all -n murali-ns
+  214  kubectl describe deployment ipl-deployment -n murali-ns
+  215  kubectl get all -n murali-ns
+  216  kubectl describe pod ipl-deployment-7b459d79d-2htzj -n murali-ns
+  217  kubectl get all -n murali-ns
+  218  kubectl rollout undo deployment ipl-deployment -n murali-ns
+  219  kubectl rollout history deployment ipl-deployment -n murali-ns
+  220  kubectl rollout status deployment ipl-deployment -n murali-ns
+  221  kubectl get all -n murali-ns
+  222  kubectl describe deployment ipl-deployment -n murali-ns
+  223  cat deployment.yaml
+  224  kubectl get all -n murali-ns
+  225  kubectl describe pod ipl-deployment-8445fb7bd6-frqds -n murali-ns
+
