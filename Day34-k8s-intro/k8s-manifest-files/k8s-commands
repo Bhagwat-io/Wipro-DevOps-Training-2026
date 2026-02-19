@@ -88,3 +88,40 @@
   142  kubectl delete pod multi-pod -n murali-ns
   143  kubectl apply -f mutli-pod.yaml
   144  kubectl get all -n murali-ns
+
+
+# rs commands
+
+  149  kubectl get all -n murali-ns
+  150  kubectl get replicaset
+  151  kubectl get replicaset -n murali-ns
+  152  kubectl get replicaset -A
+  153  kubectl get pods -A
+  154  kubectl delete rs coredns-7d58d485c9-8pwhl -n kube-system
+  155  kubectl delete pod coredns-7d58d485c9-8pwhl -n kube-system
+  156  kubectl get pods -A
+  157  kubectl delete pod metrics-server-c49756cdb-5gkhw -n murali-ns
+  158  kubectl delete pod metrics-server-c49756cdb-5gkhw -n kube-system
+  159  kubectl get pods -A
+  160  ls
+  161  kubectl get replicaset -n murali-ns
+  162  kubectl get pods -n murali-ns
+  163  vi rs.yaml
+  164  ls
+  165  kubectl apply -f rs.yaml
+  166  kubectl get rs -n murali-ns
+  167  kubectl get pods -n murali-ns
+  168  kubectl get rs -n murali-ns
+  169  kubectl get all -n murali-ns
+  170  kubectl delete pod ipl-rs-z8lhl  -n murali-ns
+  171  kubectl get all -n murali-ns
+  172  kubectl delete pods --all -n murali-ns
+  173  kubectl get all -n murali-ns
+  174  vi rs.yaml
+  175  kubectl apply -f rs.yaml
+  176  kubectl get all -n murali-ns
+  177  vi rs.yaml
+  178  kubectl apply -f rs.yaml
+  179  kubectl get all -n murali-ns
+  180  kubectl desribe rs ipl-rs -n murali-ns
+  181  kubectl describe rs ipl-rs -n murali-ns
