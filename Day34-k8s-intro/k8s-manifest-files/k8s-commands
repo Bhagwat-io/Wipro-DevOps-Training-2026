@@ -125,3 +125,26 @@
   179  kubectl get all -n murali-ns
   180  kubectl desribe rs ipl-rs -n murali-ns
   181  kubectl describe rs ipl-rs -n murali-ns
+
+
+# deployment commands 
+
+  184  kubectl get deployments -n murali-ns
+  185  kubectl get all -n murali-ns
+  186  kubectl delete rs ipl-rs -n murali-ns
+  187  kubectl get all -n murali-ns
+  188  vi deployment.yaml
+  189  ls
+  190  cat deployment.yaml
+  191  kubectl apply -f deployment.yaml
+  192  kubectl get deployments -n murali-ns
+  193  vi deployment.yaml
+  194  kubectl apply -f deployment.yaml
+  195  kubectl get deployments -n murali-ns
+  196  kubectl delete deployment ipl-rs -n murali-ns
+  197  kubectl get deployments -n murali-ns
+  198  kubectl get all -n murali-ns
+  199  vi deployment.yaml
+  200  kubectl apply -f deployment.yaml
+  201  kubectl get all -n murali-ns
+  202  kubectl describe deployment ipl-deployment -n murali-ns
