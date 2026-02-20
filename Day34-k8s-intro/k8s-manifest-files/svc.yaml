@@ -60,3 +60,19 @@ metadata:
 spec:
   type: ExternalName
   externalName: google.com   # it is used to map the service to an external DNS name, it is used to access the external service from within the cluster, it does not create any proxy or load balancer, it just maps the service to the external DNS name
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: netflix-service
+  namespace: murali-ns
+spec:
+  selector:
+    app: netflix
+  ports:
+    - protocol: TCP
+      port: 81         # host port or service port, it can be any port number, it is not necessary to be same as container port
+      targetPort: 80 # container port, it should be same as container port defined in deployment.yaml
+  type: ClusterIP
