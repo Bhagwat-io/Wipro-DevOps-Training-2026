@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: ipl-ingress
   namespace: murali-ns
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
@@ -15,3 +17,11 @@ spec:
             name: ipl-service
             port:
               number: 80
+
+      - path: /netflix
+        pathType: Prefix
+        backend:
+          service:
+            name: netflix-service
+            port:
+              number: 81
