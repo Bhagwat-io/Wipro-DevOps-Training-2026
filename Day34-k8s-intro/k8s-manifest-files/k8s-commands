@@ -165,3 +165,20 @@
   224  kubectl get all -n murali-ns
   225  kubectl describe pod ipl-deployment-8445fb7bd6-frqds -n murali-ns
 
+  # service commands
+
+    238  vi svc.yaml
+  239  ls
+  240  cat svc.yaml
+  241  kubectl get service -n murali-ns
+  242  kubectl get service
+  243  kubectl get pods -n murali-ns -o wide
+  244  kubectl get node -o wide
+  245  kubectl delete pod ipl-deployment-86c9cfdd76-5xgbw -n murali-ns
+  246  kubectl get pods -n murali-ns -o wide
+  247  ls
+  248  kubectl apply -f svc.yaml
+  249  kubectl get svc -n murali-ns
+  250  kubectl get all -n murali-ns
+
+
