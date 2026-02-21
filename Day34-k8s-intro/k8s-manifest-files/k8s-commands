@@ -182,3 +182,77 @@
   250  kubectl get all -n murali-ns
 
 
+# configmaps & secrets commands
+
+  307  cd murali-k8s/
+  308  ls
+  309  cd ..
+  310  git clone https://github.com/Msocial123/fss-Retail-App_kubernetes.git
+  311  ls
+  312  cd fss-Retail-App_kubernetes/
+  313  ls
+  314  cd k8s-manifests/
+  315  ls
+  316  vi configmap.yaml
+  317  ls
+  318  cat configmap.yaml
+  319  kubectl create ns murali-ns
+  320  ls
+  321  cat mongodb-deployment.yml
+  322  ls
+  323  kubectl apply -f configmap.yaml
+  324  kubectl get cm -n murali-ns
+  325  ls
+  326  cat userprofile-deployment.yml
+  327  ls
+  328  mv userprofile-deployment.yml retail-app-deployment.yaml
+  329  > retail-app-deployment.yaml
+  330  vi retail-app-deployment.yaml
+  331  ls
+  332  cat retail-app-deployment.yaml
+  333  ls
+  334  mv usernode-js-service.yml retail-app-svc.yaml
+  335  ls
+  336  vi retail-app-svc.yaml
+  337  ls
+  338  cat retail-app-svc.yaml
+  339  ls
+  340  cat mongodb-deployment.yml
+  341  ls
+  342  mv mongodb-deployment.yml retail-mongodb-deployment.yaml
+  343  > retail-mongodb-deployment.yaml
+  344  vi retail-mongodb-deployment.yaml
+  345  ls
+  346  cat retail-mongodb-deployment.yaml
+  347  ls
+  348  cat mongodb-service.yml
+  349  ls
+  350  mv mongodb-service.yml retail-mongodb-svc.yaml
+  351  ls
+  352  vi configmap.yaml
+  353  ls
+  354  kubectl apply -f configmap.yaml
+  355  kubectl get all -n murali-ns
+  356  ls
+  357  kubectl apply -f retail-mongodb-deployment.yaml
+  358  kubectl get all -n murali-ns
+  359  kubectl apply -f retail-mongodb-svc.yaml
+  360  kubectl get all -n murali-ns
+  361  kubectl apply -f retail-app-deployment.yaml
+  362  kubectl get all -n murali-ns
+  363  kubectl apply -f retail-app-svc.yaml
+  364  kubectl get all -n murali-ns
+  365  ls
+  366  kubectl exec -it retail-mongodb-58ffcb7cf9-kbr8l -n murali-ns -- /bin/sh
+  367  echo -n 'murali' | base64
+  368  echo -n 'Murali&$%691' | base64
+  369  echo -n 'TXVyYWxpJiQlNjkx' | base64 --decode
+  370  echo -n 'chagantyteja2502@gmail.com' | base64
+  371  echo -n 'yxoq bjuk rdnt alzp' | base64
+  372  ls
+  373  vi retail-app-deployment.yaml
+  374  vi secret.yaml
+  375  kubectl apply -f secret.yaml
+  376  kubectl get secret -n murali-ns
+  377  kubectl apply -f retail-app-deployment.yaml
+  378  kubectl get all -n murali-ns

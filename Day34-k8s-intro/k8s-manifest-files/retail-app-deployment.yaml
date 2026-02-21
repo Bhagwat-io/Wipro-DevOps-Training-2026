@@ -35,6 +35,12 @@ spec:
                 name: retail-app-config
                 key: PORT
           - name: EMAIL_USER
-            value: "chagantyteja2502@gmail.com"
+            valueFrom:
+              secretKeyRef:
+                name: retail-app-secret
+                key: EMAIL_USER
           - name: EMAIL_PASS
-            value: "yxoq bjuk rdnt alzp"
+            valueFrom:
+              secretKeyRef:
+                name: retail-app-secret
+                key: EMAIL_PASS
