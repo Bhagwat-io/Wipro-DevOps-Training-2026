@@ -167,4 +167,69 @@ How to create ns
 	Ø In a cluster whenever u want to create any resource u have follow two approaches 
 
 	1. Imperative style:- using commands is called imperative style
-Declarative style:- using yaml
+    2.  Declarative style:- using yaml
+
+Svc types
+========
+
+	1. ClusterIP:-  it will expose app within the cluster and it is for prod use and you can't access app out of the cluster and it will give only static virtual pvt ip add.
+	2. NodePort: - It will expose app in a cluster on each worker node and using worker node external ip add we can able to access the app outside of the cluster but it is for temporary use,  there is a port limitations 
+
+	Ø K8s assigns a port form 30000 to 32767 
+
+	1. LoadBalancer:- it will expose app outside of the cluster and it will give one external ip add then you can able to access the app out of the cluster but LB will give you cost and when you don't have domain or host name but if you want to access app outside of the cluster you can use LB.
+
+	1. ExternalName:- it will assign a domain name to ur svc so that you can access app using domain name instead ip add, flipkart.com,  amazon.com , jio.com, it is not for prod use, we will use for db end point connections 
+
+
+Flipkart App
+==========
+
+	Ø My app has 10 micro svc's :- flipkart.com:- orders.flipkart.com,  wishlist.flipkrt.com
+	Ø Each micro svc requires one svc in k8s
+	Ø LB :- ex-ip :- it is cost
+	Ø Client budget is only 25$
+	Ø LB is 5$
+	Ø 10*5=50$
+
+Ingress
+======
+	Ø Required only one LB 
+	Ø Using single LB ingress can expose n no.of svc's
+	Ø One :- 5$ --> 25$-5$ = 20$ 
+	Ø clusterIP type only
+
+Host-based routing:-- flipkart.login.com,  flipkart.cart.com,  flipkart.wishlist.com 
+Path-based routing:-  /login,   /cart , /wishlist,  /orders
+
+DevSecOps --> Development + security + operations
+Goal:- same as devops but with an added emphasis on security 
+Focus:- integrating security  into every step of the development process instead of treating it as afterthought.
+
+Key activities:- automated security testing, code scanning and addressing vulnerabilities early 
+Tools:- same as devops with extra tools for security ex:- SonarQube, trivy etc
+
+Core idea:- shift security left   --> make security everyone's responsibility from the beginning.
+
+Key Difference 
+============
+
+DevOps focuses on speed and collaboration 
+
+DevSecOps adds security as a central part of the process without scarifying speed
+
+In short  :- DevOps = faster delivery of software  and DevSecOps = faster + security delivery of software 
+
+
+To Creating a pod in k8s wt do you need?
+=================================
+Ø Pod name
+Ø Container name
+Ø Container image
+Ø Container port number 
+
+Annotations 
+Name: "murali"  - key value pair
+
+Name: - key 
+Murali: value
