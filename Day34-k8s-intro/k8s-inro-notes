@@ -244,3 +244,46 @@ It will not encrypt ur values but it will only encode and decode ur values
 K8s secrets will stores values in different types 
 
 Opaque:- it is a default k8s secret type
+
+Stateless app?
+============
+
+Ø It is nothing but does not store any data inside pod/container.
+Ø App pods/containers never store any data .
+Ø For this we use stateless resource in the k8s.
+Ø Stateless will not keep pods names or identify constantly means it will change the names whenever you recreate or restart your deployment 
+
+Ex:- web app, api's, backed server - application 
+
+Deployment is for stateless in k8s
+
+Characteristics 
+============
+
+Ø No local storage
+Ø Pods are identical
+Ø Can be deleted anytime
+Ø Uses deployment resource
+Ø Uses service - clusterIP, LB, NP,EN
+
+Stateful app?
+===============
+
+Ø It is nothing but stateful app will store data and needs identity
+Ø Pod names should be constant 
+Ø It will ask headless service not like actual service
+Ø If pod deletes data lost, again u have to create pod with the same name .
+Ex:- database servers like mongodb, postgresql, mysql etc
+
+
+I give replica count 5:- 
+To creating pods it follows ascending order:-  mongo-pod-0, mongo-pod-1, mongo-pod-2, mongo-pod-3, mongo-pod-4
+To deleting pods it follows descending order:- mongo-pod-4, mongo-pod-3, mongo-pod-2, mongo-pod-1, mongo-pod-0
+
+Uses
+====
+
+Ø Stable pod name
+Ø Stable storage
+Ø Ordered startup
+Same volume attached back

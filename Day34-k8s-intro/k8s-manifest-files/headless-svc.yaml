@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb
+  namespace: murali-ns
+spec:
+  selector:
+    app: mongodb
+  ports:
+    - protocol: TCP
+      port: 27017         
+      targetPort: 27017
+  clusterIP: None    # it is used to create a headless service, it will not create a cluster IP and it will not load balance the traffic, it will route the traffic to the pods directly based on the selector defined in the service, it is used for stateful applications like databases, it will create a DNS record for each pod with the format <pod-name>.<service-name>.<namespace>.svc.cluster.local
