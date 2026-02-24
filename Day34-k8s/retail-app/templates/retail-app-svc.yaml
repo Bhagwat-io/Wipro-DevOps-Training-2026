@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service 
+metadata:
+  name: {{ .Release.Name }}-service 
+  namespace: {{ .Values.namespace }}
+spec:
+  selector:
+    app: {{ .Values.service.app }}
+  ports:
+    - protocol: TCP
+      port: {{ .Values.service.port }}         # host port or service port, it can be any port number, it is not necessary to be same as container port
+      targetPort: {{ .Values.deployment.port }} # container port, it should be same as container port defined in deployment.yaml
+  type: {{ .Values.service.type }}    # it is used to expose the service externally to the outside world, it will create a load balancer and map it to the target port defined in deployment.yaml, it is supported by cloud providers like AWS, GCP, Azure etc.
