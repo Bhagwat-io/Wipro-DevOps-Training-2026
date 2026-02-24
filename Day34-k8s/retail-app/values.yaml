@@ -1,0 +1,20 @@
+namespace: murali-ns
+
+# retail-app deployment values
+
+replicas: 4
+deployment:
+  labels:
+    app: retail
+  name: retail-container
+  port: 3130
+image:
+  repository: saiteja2502/userprofileretail
+  tag: latest
+
+# retail-app svc values
+
+service:
+  app: retail
+  port: 80
+  type: LoadBalancer
