@@ -256,3 +256,38 @@
   376  kubectl get secret -n murali-ns
   377  kubectl apply -f retail-app-deployment.yaml
   378  kubectl get all -n murali-ns
+
+
+# volumes commands
+
+  480  vi storage-class.yaml
+  481  ls
+  482  kubectl apply -f storage-class.yaml
+  483  kubectl get sc
+  484  vi pvc.yaml
+  485  ls
+  486  kubectl apply -f pvc.yaml
+  487  kubectl create ns murali-ns
+  488  kubectl apply -f pvc.yaml
+  489  kubectl get pvc -n murali-ns
+  490  kubectl get pv -A
+  491  kubectl get sc
+  492  ls
+  493  > retail-mongodb-statefulset.yaml
+  494  vi retail-mongodb-statefulset.yaml
+  495  ls
+  496  kubectl apply -f .
+  497  kubectl get all -n murali-ns
+  498  kubectl get pv
+  499  kubectl get pvc -n murali-ns
+  500  vi retail-mongodb-statefulset.yaml
+  501  kubectl apply -f retail-mongodb-statefulset.yaml
+  502  kubectl get all -n murali-ns
+  503  kubectl get pv
+  504  kubectl get pvc -n murali-ns
+  505  kubectl get pv
+  506  vi retail-mongodb-statefulset.yaml
+  507  kubectl apply -f retail-mongodb-statefulset.yaml
+  508  kubectl get all -n murali-ns
+  509  kubectl get pv
+  510  kubectl get pvc -n murali-ns
