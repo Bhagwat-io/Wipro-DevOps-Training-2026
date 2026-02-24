@@ -287,3 +287,74 @@ Uses
 Ø Stable storage
 Ø Ordered startup
 Same volume attached back
+
+Why volumes
+===========
+
+	Ø To persisting app data
+	Ø To back up the data
+	Ø To access the data
+	Ø To sharing the data
+
+What is volumes
+=============
+
+	Ø A volume in k8s is a storage unit that is attached to a pod
+	Ø Containers are stateless :- once restarted they lose data
+	Ø A volume is mounted inside a pod and can be accessed by containers
+	Ø Think of it’s a hard drive attached to ur container
+	Ø Volume is a piece of storage in a cluster
+
+
+Types of volumes in k8s
+===================
+
+	1. emptyDir:-  temporary storage that lasts as long as pod runs, for temporary or testing.
+	2. hostPath:- it will use nodes filesystem
+	3. confiMaps & Secrets:- store configuration and secrets 
+	4. Pv(persistent volume) & pvc(persistent volume claim):- long-term storage from cloud or on-prem.
+	5. CSI driver:- cloud provider storage (aws-ebs, GCP-PD, Azure-Disk)
+
+Pv :- it is a storage like disk :- 20GB, cluster admin, pv is actual storage resource in k8s like disk, nfs etc
+
+PVC:- it will request storage from pv, a request for the storage by an app
+
+	Ø Pv ,pvc they are just k8s objects 
+	Ø They don’t contain the logic to create or manage storage
+	Ø CSI:- container storage interface:- it is a plugin that actually knows how to provision, attaché, delete storage in a cluster is called CSI driver. 
+	Ø Without csi driver k8s can't manage or create pv's 
+	Ø If u create pv manually don’t need  a csi driver becz you are going to provisioning manually 
+	Ø By Ur-self attach or pointing to existing storages
+
+Volumes are two types
+===================
+
+	1. Static volumes :- we have to create ebs volume in a cloud provider then you will get volume id after you have to create a pv to get storage from aws ebs is called static volumes. For this volumes you have to create PV AND PVC, always you have to manage manually. No need CSI driver plugin.
+	2. Dynamic volumes:- you don't need to create ebs volume in a cloud provider and you don’t need to create pv for storage without having ebs volume and pv we  can get storage from the cluster is called dynamic volumes. For this volumes you just create only PVC . You don’t need to manage manually. You need to install CSI driver plugin in a cluster.
+
+CSI driver:
+========
+
+	Ø K8s doesn't allow itself aws azure gcp API'S
+	Ø So how k8s will talk to cloud storage.
+	Ø CSI driver will be act as a bridge between k8s cluster and cloud storage 
+	Ø It is a standard interface and it will allow k8s to talk external storage systems.
+	
+	
+
+Sc is medium of communication ?:-  it will tell to k8s which csi driver to use to provision storage
+
+
+Storage class:- 
+============
+
+	Ø A storage class is like a blueprint for dynamic storage in k8s
+	Ø It will define how pv's should be created when a pvc asks  for storage 
+	Ø Instead of creating pv manually , the sc tells k8s to talk to the underling cloud or storage provider and provision the storage automatically 
+
+	Ø Without sc you need to create pv manually 
+	Ø If ur app needs storage , you must check whether if pv is available 
+
+
+Static volumes:- physical storage (ebs)  --> PV --> PVC --> pod 
+Dynamic volumes:- SC(pv) -->  PVC --> POD

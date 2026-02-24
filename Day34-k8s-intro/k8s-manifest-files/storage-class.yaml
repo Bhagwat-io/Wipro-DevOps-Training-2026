@@ -1,0 +1,10 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: retail-sc
+  namespace: murali-ns 
+provisioner: ebs.csi.aws.com
+parameters:
+  type: gp3  # general purpose SSD (gp3, gp2)
+reclaimPolicy: Retain 
+volumeBindingMode: WaitForFirstConsumer  # if you dont use volumeBindingMode, it will be Immediate by default. Immediate means the PV will be created as soon as the PVC is created, regardless of whether a pod is using it or not. WaitForFirstConsumer means the PV will only be created when a pod that uses the PVC is scheduled to run. This can help optimize resource usage and ensure that PVs are only created when needed.
