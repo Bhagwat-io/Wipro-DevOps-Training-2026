@@ -1,0 +1,86 @@
+  829  helm install retail-release --debug --dry-run=client veg-chart/
+  830  cd veg-chart/
+  831  ls
+  832  cd templates/
+  833  cat statefull-deployment.yaml
+  834  nl -ba statefull-deployment.yaml
+  835  nl -ba deployment-yaml
+  836  vi deployment-yaml
+  837  cd ..
+  838  cat values.yaml
+  839  cd ..
+  840  helm install retail-release --debug --dry-run=client veg-chart/
+  841  cd veg-chart/templates/
+  842  vi deployment-yaml
+  843  cd ../..
+  844  helm install retail-release --debug --dry-run=client veg-chart/
+  845  cd veg-chart/templates/
+  846  ls
+  847  nl -ba deployment-yaml
+  848  vi deployment-yaml
+  849  cd ../..
+  850  helm install retail-release --debug --dry-run=client veg-chart/
+  851  ls
+  852  cd veg-chart/
+  853  ls
+  854  cd templates/
+  855  ls
+  856  vi config.yaml
+  857  ls
+  858  cd ..
+  859  ls
+  860  vi values.yaml
+  861  cd ..
+  862  helm install retail-release --debug --dry-run=client veg-chart/
+  863  ls
+  864  cd veg-chart/
+  865  ls
+  866  cat values.yaml
+  867  vi values.yaml
+  868  cd ..
+  869  helm install retail-release --debug --dry-run=client veg-chart/
+  870  cd veg-chart/
+  871  ls
+  872  vi values.yaml
+  873  cd ..
+  874  helm install retail-release --debug --dry-run=client veg-chart/
+  875  ls
+  876  kubectl get ns
+  877  kubectl get all -n murali-ns
+  878  ls
+  879  helm install retail-release veg-chart/
+  880  kubectl get all -n murali-ns
+  881  ls
+  882  kubectl get all -n murali-ns
+  883  kubectl describe pod retail-release-deployment-56b7d6bd79-hw8nz -n murali-ns
+  884  helm install retail-release veg-chart/
+  885  kubectl get all -n murali-ns
+  886  kubectl delete pods --all -n murali-ns
+  887  kubectl get all -n murali-ns
+  888  ls
+  889  cd veg-chart/
+  890  cd templates/
+  891  ls
+  892  cat pvc.yaml
+  893  vi pvc.yaml
+  894  ls
+  895  cd ../..
+  896  helm list
+  897  helm upgrade retail-release veg-chart/
+  898  kubectl get all -n murali-ns
+  899  kubectl delete pods --all -n murali-ns
+  900  kubectl get all -n murali-ns
+  901  kubectl get pv
+  902  kubectl get pvc -n murali-ns
+  903  kubectl get all -n murali-ns
+  904  ls
+  905  cd veg-chart/
+  906  ls
+  907  vi values.yaml
+  908  cd ..
+  909  helm list
+  910  helm upgrade retail-release veg-chart/
+  911  kubectl get all -n murali-ns
+  912  kubectl rollout restart deployment retail-release-deployment -n murali-ns
+  913  kubectl get all -n murali-ns
+  914  history
