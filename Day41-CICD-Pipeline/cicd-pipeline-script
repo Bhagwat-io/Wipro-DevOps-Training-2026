@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('git checkout') {
+            steps {
+                git branch: 'stateful-set', url: 'https://github.com/Msocial123/fss-Retail-App_kubernetes.git'
+            }
+        }
+        
+        stage('docker build, tag & push'){
+            steps{
+                script{
+                    withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
+                      sh 'docker build -t fss-retail-app:v1.0.1 .'
+                      sh 'docker tag fss-retail-app:v1.0.1 muralisocial123/fss-retail-app:v1.0.1'
+                      sh 'docker push muralisocial123/fss-retail-app:v1.0.1'
+                   }
+                }
+            }
+        }
+    }
+}
+
+
+# For docker login failed error in jenkins pipeline, run below commands on jenkins VM only.
+ 
+sudo usermod -aG docker jenkins
+sudo systemctl restart jenkins
