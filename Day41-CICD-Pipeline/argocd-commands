@@ -10,3 +10,18 @@
 1090  kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 1091  kubectl get all -n murali-ns
 1092  history
+
+# jenkins notes
+
+Jenkins CICD pipeline
+=================
+
+CI:- continues integration 
+CD:- continues deploy
+
+For both CICD we have used jenkins but it’s a outdated 
+
+CI:- GitHub actions
+CD:- ArgoCD
+
+Argocd:- it is a gitops tool
