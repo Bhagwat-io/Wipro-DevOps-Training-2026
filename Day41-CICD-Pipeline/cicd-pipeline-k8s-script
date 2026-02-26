@@ -1,0 +1,44 @@
+pipeline {
+    agent any
+ 
+    stages {
+        stage('git checkout') {
+            steps {
+                git branch: 'config-sect', url: 'https://github.com/RithikaMurugannn/fss-Retail-App_kubernetes.git'
+            }
+        }
+        stage('docker build, tag & push'){
+            steps{
+                script{
+                    withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
+                      sh 'docker build -t fss-retail-app:v1.0.0 .'
+                      sh 'docker tag fss-retail-app:v1.0.0 rithika17/fss-retail-app:v1.0.0'
+                      sh 'docker push rithika17/fss-retail-app:v1.0.0'
+                   }
+                }
+            }
+        }
+        stage('deploy to compose'){
+            steps{
+                //sh 'docker-compose up -d '
+                sh 'docker-compose down'
+            }
+        }
+        stage('deploy to eks'){
+            steps{
+                script{
+                    dir('k8s-manifests') {
+                       withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'kube-config', namespace: '', restrictKubeConfigAccess: false, serverUrl: '') {
+                         sh 'kubectl apply -f configmap.yaml'
+                         sh 'kubectl apply -f secret.yaml'
+                         sh 'kubectl apply -f retail-mongodb-deployment.yaml'
+                         sh 'kubectl apply -f retail-mongodb-svc.yaml'
+                         sh 'kubectl apply -f retail-app-deployment.yaml'
+                         sh 'kubectl apply -f retail-app-svc.yaml'
+                     }
+                   }
+                }
+            }
+        }
+    }
+}
