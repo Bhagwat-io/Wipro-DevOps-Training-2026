@@ -1,5 +1,5 @@
 
-eksctl create addon --name aws-ebs-csi-driver --cluster cluster1 --region us-east-1
+eksctl create addon --name aws-ebs-csi-driver --cluster murali-cluster --region us-east-1
 
 kubectl get pods -n kube-system | grep ebs
 
@@ -17,7 +17,7 @@ aws eks describe-nodegroup \
 
 
 aws iam attach-role-policy \
-  --role-name eksctl-murali-cluster-nodegroup-k8-NodeInstanceRole-7DuLq6sBvxVW \
+  --role-name eksctl-murali-cluster-nodegroup-k8-NodeInstanceRole-f4VlSWs8FO3m \
   --policy-arn arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy
 
 
