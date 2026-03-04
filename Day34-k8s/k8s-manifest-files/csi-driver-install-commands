@@ -17,7 +17,7 @@ aws eks describe-nodegroup \
 
 
 aws iam attach-role-policy \
-  --role-name eksctl-murali-cluster-nodegroup-k8-NodeInstanceRole-f4VlSWs8FO3m \
+  --role-name eksctl-murali-cluster-nodegroup-k8-NodeInstanceRole-oDiRjVgBDes0 \
   --policy-arn arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy
 
 
